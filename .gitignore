@@ -9,3 +9,5 @@
 .externalNativeBuild
 *.bat
 /app/build
+.idea
+/gradle
