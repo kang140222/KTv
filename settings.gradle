@@ -1,1 +1,4 @@
-include ':app'
+include ':jcom', ':base', ':dvb'
+
+project(':jcom').projectDir = new File(settingsDir, './projects/jcom')
+project(':dvb').projectDir = new File(settingsDir, './modules/dvb')
