@@ -1,4 +1,4 @@
-package bora.dkkang.ktv;
+package bora.dkkang.ktv.packages.projects.jom;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import bora.dkkang.ktv.R;
+import bora.dkkang.ktv.packages.projects.jom.R;
 
 public class MainActivity extends AppCompatActivity {
     Context mContext;

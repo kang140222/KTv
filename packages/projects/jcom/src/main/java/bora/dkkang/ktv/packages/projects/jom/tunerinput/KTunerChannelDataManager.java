@@ -1,4 +1,4 @@
-package bora.dkkang.ktv.tunerinput;
+package bora.dkkang.ktv.packages.projects.jom.tunerinput;
 
 import bora.dkkang.ktv.base.KChannelDataManager;
 import bora.dkkang.ktv.base.KSectionDataSource;

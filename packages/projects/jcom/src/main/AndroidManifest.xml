@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="bora.dkkang.ktv.jcom">
+    package="bora.dkkang.ktv.packages.projects.jom">
 
     <application
         android:allowBackup="true"

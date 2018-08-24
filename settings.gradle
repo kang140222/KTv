@@ -1,4 +1,5 @@
 include ':jcom', ':base', ':dvb'
 
-project(':jcom').projectDir = new File(settingsDir, './projects/jcom')
+project(':jcom').projectDir = new File(settingsDir, './packages/projects/jcom')
 project(':dvb').projectDir = new File(settingsDir, './modules/dvb')
+project(':base').projectDir = new File(settingsDir, './base')

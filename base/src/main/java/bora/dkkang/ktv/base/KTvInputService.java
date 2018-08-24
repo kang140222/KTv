@@ -1,10 +1,23 @@
 package bora.dkkang.ktv.base;
 
-public abstract class KTvInputService {
-    public abstract KChannelDataManager createOrGetChannelDataManager();
+import android.media.tv.TvInputService;
 
-    public KTvInputService() {
-        KChannelDataManager channelDataManager = createOrGetChannelDataManager();
+public abstract class KTvInputService extends TvInputService {
+    private KModuleFactory mModuleFactory;
 
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        mModuleFactory = createModuleFactory();
     }
+
+    @Override
+    public Session onCreateSession(String inputId) {
+        KTvInputSession session = null;
+        session = new KTvInputSession(this, inputId, mModuleFactory);
+        session.setOverlayViewEnabled(true);
+        return session;
+    }
+
+    public abstract KModuleFactory createModuleFactory();
 }

@@ -6,11 +6,13 @@ public class KTvInputSessionWorker {
     private final KChannelDataManager mChannelDataManager;
     private final KDataSourceManager mDataSourceManager;
     private final KEventDetector mEventDetector;
-    public KTvInputSessionWorker(Context context, KChannelDataManager channelDataManager,
-        KDataSourceManager dataSourceManager, KEventDetector eventDetector) {
+    private final KTvPlayer mTvPlayer;
+
+    public KTvInputSessionWorker(Context context, KModuleFactory factory) {
         mContext = context;
-        mChannelDataManager = channelDataManager;
-        mDataSourceManager = dataSourceManager;
-        mEventDetector = eventDetector;
+        mChannelDataManager = factory.createOrGetChannelDataManager();
+        mDataSourceManager = factory.createOrGetDataSourceManager();
+        mEventDetector = factory.createOrGetEventDetector();
+        mTvPlayer = factory.createOrGetTvPlayer();
     }
 }
