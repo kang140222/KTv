@@ -13,8 +13,8 @@ public abstract class KTvInputService extends TvInputService {
 
     @Override
     public Session onCreateSession(String inputId) {
-        KTvInputSession session = null;
-        session = new KTvInputSession(this, inputId, mModuleFactory);
+        KPlayingSession session = null;
+        session = new KPlayingSession(this, inputId, mModuleFactory);
         session.setOverlayViewEnabled(true);
         return session;
     }
